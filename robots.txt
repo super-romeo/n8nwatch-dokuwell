@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://n8nwatch.dokuwell.com/sitemap.xml

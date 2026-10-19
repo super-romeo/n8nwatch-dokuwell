@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google Tag Manager: код контейнера вставляет автор по заказу «Смоков» (СМ-09) -->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://n8nwatch.dokuwell.com/">
+<title>n8n monitoring for automation agencies — failed and missed runs, client status page</title>
+<meta name="description" content="For agencies and freelancers who maintain n8n workflows for clients: alerts on failed and missed runs per client, and a status page or monthly report for each client.">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+<script src="smoke.js" defer></script>
+<!-- faq-jsonld:start -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is a missed run?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A scheduled or expected run that did not happen. It produces no error, so it needs separate monitoring."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does each client get a status page?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, each client can have a page showing only their automations."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work with self-hosted n8n?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, self-hosted and cloud instances can be connected."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it change my workflows?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. It reads run information; your workflows stay as they are."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use it already?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not yet. The service is in preparation, and we are checking whether agencies need it."
+   }
+  }
+ ]
+}
+</script>
+<!-- faq-jsonld:end -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript): по заказу «Смоков» (СМ-09) -->
+
+<header><div class="wrap">
+  <div class="logo"><a href="index.html" data-ev="click_logo_home">FlowWatch</a></div>
+  <nav class="top"><a href="#what" data-ev="click_nav_what">What you get</a><a href="price.html" data-ev="click_nav_price">Price</a><a href="#example" data-ev="click_nav_example">Example</a><a href="#start" data-ev="click_nav_start">Start</a></nav>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <h1>Know when a client's n8n workflow fails or silently stops running — before the client does</h1>
+    <p class="sub">For automation agencies and freelancers on support retainers: watch every client's n8n workflows, get alerted on failed runs and on schedules that stopped firing, and give each client a status page or monthly report.</p>
+    <a class="cta" href="price.html" data-ev="cta_click">I need this</a>
+    <p class="cta-note">Service in preparation · No payment is accepted on this page</p>
+  </div>
+
+  <section id="what" data-view="features_view">
+    <h2>What you get</h2>
+    <div class="grid">
+      <div class="card"><b>Failed runs</b><span>An alert when a workflow run ends with an error, grouped by client.</span><br><a class="btn" href="price.html" data-ev="feature_failed">I need this</a></div>
+      <div class="card"><b>Missed runs</b><span>An alert when a scheduled workflow did not run when it should have.</span><br><a class="btn" href="price.html" data-ev="feature_missed">I need this</a></div>
+      <div class="card"><b>Client status page</b><span>A page for each client showing which automations are running.</span><br><a class="btn" href="price.html" data-ev="feature_status">I need this</a></div>
+      <div class="card"><b>Monthly report</b><span>A report per client: runs, failures, and what was fixed.</span><br><a class="btn" href="price.html" data-ev="feature_report">I need this</a></div>
+    </div>
+  </section>
+
+  <section id="example" data-view="example_view">
+    <h2>Example (fictional data)</h2>
+    <p class="fine">Agency with 8 clients and 3 n8n instances. Tuesday 06:00: the CRM sync of one client did not run — alert in Slack within minutes. Fixed by 07:30. The client's status page shows the incident as resolved, and it appears in the monthly report.</p>
+    <a class="cta" href="price.html" data-ev="click_cta_after_example">Choose your plan</a>
+  </section>
+<!-- seo-tekst:start -->
+  <section id="opis">
+    <h2>How it works</h2>
+    <p>An agency that builds automations in n8n usually keeps maintaining them after launch, on a monthly retainer. The hard part of that retainer is not fixing a broken workflow, but knowing that it broke. The built-in error workflow fires when a run fails; a schedule that simply stops firing produces no error at all, and the client may notice the missing data before the agency does.</p>
+    <p>FlowWatch connects to your n8n instances and watches the workflows you mark as important. For each workflow you set who the client is and what normal looks like: a run every hour, every morning at six, or on every new order. When a run fails, you get an alert. When a run that should have happened did not, you get an alert too.</p>
+    <p>Alerts arrive where you work — email, Slack or a phone notification — and are grouped by client, so it is clear whose automation needs attention. You can set quiet hours and decide which workflows wake someone up at night and which can wait until morning.</p>
+    <p>Each client can have a status page: a simple list of their automations with the latest run and its result. It shows the client that the work they pay for is running, without giving them access to your n8n instance.</p>
+    <p>At the end of the month FlowWatch prepares a report for each client: how many runs, which failed, which were missed, and when each issue was resolved. You can add a note about what you changed. The report helps the conversation about the retainer — it shows the maintenance that otherwise stays invisible.</p>
+    <p>Several instances and many clients are handled in one account: self-hosted n8n and n8n cloud alike. The agency sees all clients on one screen; each client sees only their own page.</p>
+    <p>FlowWatch is built for small agencies and freelancers with a handful of clients to a few dozen. Pricing depends on the number of n8n instances you connect.</p>
+    <p>Setup takes a few minutes per instance. You connect it with an API key, choose the workflows that matter for each client and confirm how often each one is expected to run; FlowWatch suggests the expected schedule from past runs. You can mute a workflow during planned maintenance, so a client's status page does not show an incident while you deliberately stop their automations for an update, and you can pause monitoring for a client whose retainer has ended.</p>
+    <p>FlowWatch is an independent tool and is not affiliated with n8n. It reads run information from your instances; it does not change your workflows.</p>
+  </section>
+  <section id="faq">
+    <h2>Questions</h2>
+    <h3>What is a missed run?</h3>
+    <p>A scheduled or expected run that did not happen. It produces no error, so it needs separate monitoring.</p>
+    <h3>Does each client get a status page?</h3>
+    <p>Yes, each client can have a page showing only their automations.</p>
+    <h3>Does it work with self-hosted n8n?</h3>
+    <p>Yes, self-hosted and cloud instances can be connected.</p>
+    <h3>Does it change my workflows?</h3>
+    <p>No. It reads run information; your workflows stay as they are.</p>
+    <h3>Can I use it already?</h3>
+    <p>Not yet. The service is in preparation, and we are checking whether agencies need it.</p>
+  </section>
+<!-- seo-tekst:end -->
+  <section id="start" data-view="start_view">
+    <h2>Connect your first instance</h2>
+    <p><label>Number of clients on support<br><select data-ev-focus="form_start" style="margin-top:6px;padding:8px;font-size:16px"><option value="">— please choose —</option><option>1–3</option><option>4–10</option><option>11–25</option><option>More than 25</option></select></label></p>
+    <a class="cta" href="price.html" data-ev="form_submit_click">Connect n8n</a>
+  </section>
+</div>
+
+<footer><div class="wrap">
+  <p><a href="privacy.html" data-ev="click_legal_privacy">Privacy</a></p>
+  <p class="muted">FlowWatch is an independent tool and is not affiliated with n8n. It reads run information and does not change your workflows.</p>
+</div></footer>
+
+</body>
+</html>
